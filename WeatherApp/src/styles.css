@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('/assets/grey.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #D2691E;
+  transition: .3s;  
+}
+
+.navbar a:hover::before {
+   width: 100%; 
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 550px;
+    background: url('/assets/sunny.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.container .content {
+    position: absolute;   
+    width: 75%;
+    height: 100%;
+    background-color: transparent;
+    padding: 80px;
+    color: #D2691E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .weather-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+}
+
+.content h2 {
+    font-size: 32px;
+    color: #fff;
+}
+
+.content p {
+    font-size: 16px;
+    margin: 20px, 0;
+}
+
+
+.content .degrees p {
+    font-size: 40px;
+}
+
+
+.weather-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #D2691E;
+    
+}
+
+.weather-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+
+.day {
+  font-size: 40px;  
+}
+
+.date {
+    font-size: 18px;
+}
+
+.location {
+ font-size: 18px;
+}
+
+.temperature {
+  position: relative;
+}
+
+.temperature i {
+    font-size: 67px;
+    margin-top: 7rem;
+    margin-bottom: 15px;  
+}
+
+.temperature h1 {
+    font-size: 67px;
+}
+
+.temperature span {
+    position: absolute;
+    font-size: 30px;
+    bottom: -18px;
+    font-weight: bold; 
+}
+
+.weather-details {
+    padding: 35px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.weather-details h5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.forecast {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.forecast button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.forecast button:focus {
+    background-color: white;
+    color: #D2691E;
+}
+
+.forecast button i {
+    font-size: 25px;
+}
+
+.forecast button span {
+  font-size: 18px;
+}
+
+.forecast button h1 {
+    font-size: 22px;
+}
+
+.search-bar {
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar:hover input{
+    width: 400px;
+}
+
+.search-bar input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.search-bar a .bi{
+    color: #D2691E;
+    font-size: 18px;
+}
+
+.logo .bi {
+    color: #D2691E;
+}
